@@ -1,0 +1,40 @@
+.footer {
+  background-color: #000000;
+  height: 150px;
+  padding-top: 80px;
+  padding-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-items-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+  width: 120px;
+}
+
+.footer-item {
+  list-style-type: none;
+}
+
+.button {
+  background-color: transparent;
+  color: #ffffff;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.contact-us {
+  color: #ffffff;
+  font-family: 'Roboto';
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+}

@@ -7,10 +7,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Roboto';
 }
 
 .not-found-heading {
-  font-family: 'HK Grotesk';
   font-size: 40px;
   font-weight: 600;
   line-height: 52px;
@@ -28,7 +28,6 @@
 }
 
 .not-found-description {
-  font-family: 'HK Grotesk';
   font-size: 16px;
   line-height: 21px;
   font-weight: 500;
@@ -54,9 +53,8 @@
   outline: none;
   cursor: pointer;
   color: #171f46;
-  font-family: 'HK Grotesk';
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 24px;
 }
 

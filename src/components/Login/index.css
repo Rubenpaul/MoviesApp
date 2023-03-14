@@ -86,7 +86,7 @@
   border-radius: 2px;
   outline: none;
   padding-left: 16px;
-  font-family: 'HK Grotesk';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -95,7 +95,7 @@
 }
 
 .error-msg {
-  font-family: 'HK Grotesk';
+  font-family: 'Roboto';
   font-style: normal;
   color: #dc2626;
   font-size: 14px;
@@ -113,10 +113,10 @@
   outline: none;
   cursor: pointer;
   padding: 8px 20px;
+  font-family: 'Roboto';
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'HK Grotesk';
   font-size: 14px;
   font-weight: 600;
   color: #ffffff;
