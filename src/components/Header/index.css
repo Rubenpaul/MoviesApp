@@ -1,9 +1,10 @@
 .header {
-  background-color: #131313;
-  padding-left: 25px;
-  padding-right: 25px;
   display: flex;
   flex-direction: column;
+  background-color: transparent;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: #131313;
 }
 @media screen and (min-width: 768px) {
   .header {
@@ -11,6 +12,7 @@
     padding-right: 60px;
   }
 }
+
 .nav {
   height: 75px;
   display: flex;

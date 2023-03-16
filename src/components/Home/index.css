@@ -1,13 +1,98 @@
-.home {
+.movies-home-container {
+  border: 1px solid red;
+  background: #131313;
 }
 
-.home-bg {
-  background-image: url('https://res.cloudinary.com/dio2gwquj/image/upload/v1678774194/wp2581913-man-of-steel-wallpaper_1_home-bg-img_noqvt4.png');
-  background-size: cover;
-  height: 60vh;
+.movie-status-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 @media screen and (min-width: 768px) {
-  .home-bg {
+  .movie-status-heading {
+    font-size: 24px;
+    line-height: 31px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.loader-container {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+}
+@media screen and (min-width: 768px) {
+  .loader-container {
+    height: 170px;
+  }
+}
+
+.failure-container {
+  height: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #0d0d0d;
+}
+
+@media screen and (min-width: 768px) {
+  .failure-container {
+    height: 170px;
+  }
+}
+
+.failure-text {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 13px;
+  color: #ffffff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .failure-text {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+}
+
+.try-again-btn {
+  padding: 4px 12px;
+  height: 28px;
+  background: #ffffff;
+  border-radius: 4px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 16px;
+  color: #171f46;
+  border: 0px;
+  outline: none;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .try-again-btn {
+    font-size: 14px;
+    line-height: 24px;
+    padding: 4px 16px;
+    height: 32px;
   }
 }

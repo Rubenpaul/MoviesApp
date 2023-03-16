@@ -1,31 +1,23 @@
 import './index.css'
 import {Component} from 'react'
 
-import {Link} from 'react-router-dom'
+import {Link, withRouter} from 'react-router-dom'
 
 import {HiOutlineSearch} from 'react-icons/hi'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
 class Header extends Component {
-  state = {showSearchInput: false, showMenu: false, searchInput: ''}
+  state = {showSearchInput: false, showMenu: false}
 
   onClickSearchBtn = () => {
-    const {searchInput, showSearchInput} = this.state
-
-    if (searchInput !== '' && showSearchInput === true) {
-      console.log('Go to search Page')
-    } else {
-      this.setState(prevState => ({
-        showSearchInput: !prevState.showSearchInput,
-      }))
-    }
+    this.setState(prevState => ({
+      showSearchInput: !prevState.showSearchInput,
+    }))
   }
 
   onClickHamburgerMenu = () => {
-    this.setState(prevState => ({
-      showMenu: !prevState.showMenu,
-    }))
+    this.setState({showMenu: true})
   }
 
   onClickCloseBtn = () => {
@@ -33,11 +25,15 @@ class Header extends Component {
   }
 
   onChangeSearchInput = event => {
-    this.setState({searchInput: event.target.value})
+    const {search} = this.props
+
+    if (event.key === 'Enter') {
+      search(event.target.value)
+    }
   }
 
   render() {
-    const {showSearchInput, showMenu, searchInput} = this.state
+    const {showSearchInput, showMenu} = this.state
 
     const searchContainerStyle = showSearchInput
       ? 'search-container'
@@ -79,18 +75,19 @@ class Header extends Component {
                     <input
                       type="search"
                       className="search-input"
-                      value={searchInput}
-                      onChange={this.onChangeSearchInput}
+                      onKeyDown={this.onChangeSearchInput}
                     />
                   )}
                   <div className={searchBtnContainerStyle}>
-                    <button
-                      type="button"
-                      className="search-btn"
-                      onClick={this.onClickSearchBtn}
-                    >
-                      <HiOutlineSearch size={24} />
-                    </button>
+                    <Link to="/search">
+                      <button
+                        type="button"
+                        className="search-btn"
+                        onClick={this.onClickSearchBtn}
+                      >
+                        <HiOutlineSearch size={24} />
+                      </button>
+                    </Link>
                   </div>
                 </div>
                 <div className="profile-btn-container">
@@ -134,6 +131,7 @@ class Header extends Component {
                 </Link>
               </li>
             </ul>
+
             <button
               type="button"
               className="close-btn"
@@ -147,4 +145,4 @@ class Header extends Component {
     )
   }
 }
-export default Header
+export default withRouter(Header)

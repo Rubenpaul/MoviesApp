@@ -1,0 +1,50 @@
+.slick-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  background: #0d0d0d;
+}
+
+@media screen and (min-width: 768px) {
+  .slick-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.slick-slider {
+  width: 100%;
+  padding: 0px;
+  list-style: none;
+}
+
+.slick-item {
+  padding: 0px;
+  margin: 0px;
+  background-color: transparent;
+}
+
+.slick-img {
+  height: 64px;
+  width: 100px;
+  border-radius: 8px;
+  margin: 0px 2px;
+}
+
+@media (min-width: 567px) {
+  .slick-img {
+    margin: 0px 5px;
+    height: 120px;
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .slick-img {
+    height: 170px;
+    width: 254px;
+    margin: 0px 10px;
+  }
+}

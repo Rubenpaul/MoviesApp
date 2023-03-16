@@ -1,0 +1,83 @@
+.search-results-container {
+  background-color: #131313;
+  font-family: 'Roboto';
+  height: 100vh;
+  border: 1px solid red;
+}
+
+.search-no-results-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-loader {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.no-search-videos-img {
+  height: 176px;
+  width: 210px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-search-videos-img {
+    height: 378px;
+    width: 450px;
+  }
+}
+
+.no-search-text {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .no-search-text {
+    margin-top: 40px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
+
+.failure-view-img {
+  height: 172px;
+  width: 233px;
+}
+
+@media screen and (min-width: 768px) {
+  .failure-view-img {
+    height: 276px;
+    width: 375px;
+  }
+}
+
+.failure-movies-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .failure-movies-text {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 31px;
+  }
+}
