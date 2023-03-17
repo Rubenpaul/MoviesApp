@@ -1,8 +1,11 @@
-.search-results-container {
+.bg-container {
   background-color: #131313;
-  font-family: 'Roboto';
-  height: 100vh;
-  border: 1px solid red;
+  min-height: 100vh;
+}
+
+.initial-view {
+  background-color: #131313;
+  height: 80vh;
 }
 
 .search-no-results-container {
@@ -11,6 +14,7 @@
   justify-content: center;
   align-items: center;
 }
+
 .no-results {
   display: flex;
   flex-direction: column;
@@ -19,7 +23,7 @@
 }
 
 .search-loader {
-  height: 90vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -79,5 +83,21 @@
     font-weight: 500;
     font-size: 24px;
     line-height: 31px;
+  }
+}
+
+.search-movies-list {
+  background: #131313;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .search-movies-list {
+    padding-left: 65px;
+    padding-right: 65px;
   }
 }

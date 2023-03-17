@@ -41,11 +41,15 @@ class Login extends Component {
 
   onSubmitSuccess = data => {
     const {history} = this.props
+    const {username, password} = this.state
 
     const jwtToken = data.jwt_token
     Cookies.set('jwt_token', jwtToken, {expires: 7})
 
     history.replace('/')
+
+    localStorage.setItem('username', username)
+    localStorage.setItem('password', password)
   }
 
   onSubmitFailure = data => {

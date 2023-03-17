@@ -1,0 +1,20 @@
+.movie-list-item {
+  height: 100px;
+  width: 90px;
+  margin: 6px;
+  list-style: none;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-list-item {
+    height: 170px;
+    width: 255px;
+    margin: 8px;
+  }
+}
+
+.movie-item-img {
+  border-radius: 10px;
+  height: 100%;
+  width: 100%;
+}

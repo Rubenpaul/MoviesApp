@@ -24,16 +24,14 @@ class Header extends Component {
     this.setState({showMenu: false})
   }
 
-  onChangeSearchInput = event => {
+  onKeyDownSearch = event => {
     const {search} = this.props
-
-    if (event.key === 'Enter') {
-      search(event.target.value)
-    }
+    search(event)
   }
 
   render() {
     const {showSearchInput, showMenu} = this.state
+    const {searchInput} = this.props
 
     const searchContainerStyle = showSearchInput
       ? 'search-container'
@@ -75,7 +73,7 @@ class Header extends Component {
                     <input
                       type="search"
                       className="search-input"
-                      onKeyDown={this.onChangeSearchInput}
+                      onKeyDown={this.onKeyDownSearch}
                     />
                   )}
                   <div className={searchBtnContainerStyle}>

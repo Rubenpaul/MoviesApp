@@ -4,6 +4,7 @@ import Loader from 'react-loader-spinner'
 import Cookies from 'js-cookie'
 
 import Header from '../Header'
+import MovieItem from '../MovieItem'
 
 const apiStatusConstants = {
   initial: 'INITIAL',
@@ -70,15 +71,25 @@ class Search extends Component {
     )
   }
 
+  renderSearchMovies = () => {
+    const {searchVideos} = this.state
+
+    return (
+      <ul className="search-movies-list">
+        {searchVideos.map(eachSearch => (
+          <MovieItem movie={eachSearch} key={eachSearch.id} />
+        ))}
+      </ul>
+    )
+  }
+
   renderSearchSuccessView = () => {
     const {searchVideos} = this.state
     const moviesLength = searchVideos.length
 
-    return moviesLength === 0 ? (
-      this.renderNoVideosView()
-    ) : (
-      <h1 className="movie-status-heading">searchResults</h1>
-    )
+    return moviesLength === 0
+      ? this.renderNoVideosView()
+      : this.renderSearchMovies()
   }
 
   renderSearchResults = () => {
@@ -96,8 +107,12 @@ class Search extends Component {
     }
   }
 
-  search = value => {
-    this.setState({searchInput: value}, this.getSearchVideos)
+  renderInitialView = () => <div className="initial-view">{}</div>
+
+  search = event => {
+    if (event.key === 'Enter') {
+      this.setState({searchInput: event.target.value}, this.getSearchVideos)
+    }
   }
 
   getSearchVideos = async () => {
@@ -144,16 +159,17 @@ class Search extends Component {
   render() {
     const {searchInput} = this.state
     return (
-      <>
+      <div className="bg-container">
         <Header
           search={this.search}
           searchInput={searchInput}
           getSearchVideos={this.getSearchVideos}
         />
-        <div className="search-results-container">
-          {this.renderSearchResults()}
-        </div>
-      </>
+
+        {searchInput === ''
+          ? this.renderInitialView()
+          : this.renderSearchResults()}
+      </div>
     )
   }
 }

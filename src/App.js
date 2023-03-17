@@ -9,7 +9,7 @@ import Home from './components/Home'
 import Popular from './components/Popular'
 import Search from './components/Search'
 import Account from './components/Account'
-import MovieItem from './components/MovieItem'
+import MovieItemDetails from './components/MovieItemDetails'
 import NotFound from './components/NotFound'
 
 class App extends Component {
@@ -21,7 +21,7 @@ class App extends Component {
         <ProtectedRoute exact path="/popular" component={Popular} />
         <ProtectedRoute exact path="/search" component={Search} />
         <ProtectedRoute exact path="/account" component={Account} />
-        <ProtectedRoute exact path="/movies/:id" component={MovieItem} />
+        <ProtectedRoute exact path="/movies/:id" component={MovieItemDetails} />
         <Route exact path="/not-found" component={NotFound} />
         <Redirect to="/not-found" />
       </Switch>
