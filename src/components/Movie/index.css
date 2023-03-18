@@ -1,0 +1,241 @@
+.similar-bg {
+  background-color: #131313;
+}
+
+.movie-success-container {
+  height: 427px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-success-container {
+    height: 510px;
+  }
+}
+
+.movie-details {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-details {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.movie-release-details {
+  display: flex;
+  align-items: center;
+  padding: 0px;
+  height: 23px;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .movie-release-details {
+    height: 25px;
+    margin-bottom: 13px;
+  }
+}
+
+.movie-runtime {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .movie-runtime {
+    font-size: 18px;
+    line-height: 23px;
+    color: #ffffff;
+  }
+}
+
+.movie-censor-status {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+  margin-left: 12px;
+  margin-right: 12px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  padding: 2px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-censor-status {
+    margin-left: 17px;
+    margin-right: 17px;
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.movie-release-date {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 21px;
+  color: #ffffff;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-release-date {
+    font-size: 18px;
+    line-height: 23px;
+  }
+}
+
+.movie-more-details-container {
+  background-color: #131313;
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-more-details-container {
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+}
+
+.category {
+  margin-right: 50px;
+}
+
+@media screen and (min-width: 768px) {
+  .category {
+    margin-right: 140px;
+  }
+}
+
+.category-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+  color: #64748b;
+}
+@media screen and (min-width: 768px) {
+  .category-heading {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
+
+.list {
+  margin-top: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  list-style: none;
+  padding: 0px;
+}
+
+.para {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ffffff;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .para {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.similar-movies-like-container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .similar-movies-like-container {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.more-like-this-heading {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+  color: #ffffff;
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+
+@media screen and (min-width: 768px) {
+  .more-like-this-heading {
+    font-size: 24px;
+    line-height: 31px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.similar-movies {
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.similar-item {
+  list-style: none;
+  padding: 0px;
+  margin-right: 15px;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .similar-item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+.movie-img {
+  height: 100%;
+  width: 90px;
+  border-radius: 8px;
+}
+
+@media screen and (min-width: 768px) {
+  .movie-img {
+    width: 255px;
+    border-radius: 8px;
+  }
+}

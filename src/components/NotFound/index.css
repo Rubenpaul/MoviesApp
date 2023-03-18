@@ -34,12 +34,14 @@
   color: #ffffff;
   margin-top: 32px;
   text-align: center;
+  width: 80%;
 }
 
 @media screen and (min-width: 768px) {
   .not-found-description {
     font-size: 24px;
     line-height: 32px;
+    width: 80%;
   }
 }
 

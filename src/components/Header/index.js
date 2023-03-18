@@ -31,7 +31,6 @@ class Header extends Component {
 
   render() {
     const {showSearchInput, showMenu} = this.state
-    const {searchInput} = this.props
 
     const searchContainerStyle = showSearchInput
       ? 'search-container'
@@ -82,6 +81,7 @@ class Header extends Component {
                         type="button"
                         className="search-btn"
                         onClick={this.onClickSearchBtn}
+                        testid="searchButton"
                       >
                         <HiOutlineSearch size={24} />
                       </button>

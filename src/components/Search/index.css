@@ -13,6 +13,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #131313;
 }
 
 .no-results {
@@ -92,12 +93,13 @@
   padding-right: 25px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 @media screen and (min-width: 768px) {
   .search-movies-list {
     padding-left: 65px;
     padding-right: 65px;
+    padding-bottom: 60px;
   }
 }

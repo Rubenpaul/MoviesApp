@@ -1,7 +1,7 @@
 .movie-list-item {
   height: 100px;
   width: 90px;
-  margin: 6px;
+  margin: 10px;
   list-style: none;
 }
 
@@ -9,7 +9,7 @@
   .movie-list-item {
     height: 170px;
     width: 255px;
-    margin: 8px;
+    margin: 14px;
   }
 }
 

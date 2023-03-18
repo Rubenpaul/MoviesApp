@@ -1,5 +1,5 @@
 .movies-home-container {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   background: #131313;
 }
 
@@ -53,6 +53,10 @@
   }
 }
 
+.failure {
+  height: 40px;
+  width: 40px;
+}
 .failure-text {
   font-family: 'Roboto';
   font-style: normal;

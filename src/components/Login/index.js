@@ -107,14 +107,14 @@ class Login extends Component {
           className="website-logo"
         />
         <div className="login-container">
-          <div className="container">
+          <div className="login">
             <h1 className="form-heading">Login</h1>
             <form onSubmit={this.onSubmitForm} className="form">
               {this.renderUsernameField()}
               {this.renderPasswordField()}
               <p className="error-msg">{errMsg}</p>
               <button type="submit" className="sign-in-btn">
-                Sign in
+                Login
               </button>
             </form>
           </div>

@@ -2,11 +2,11 @@ import './index.css'
 
 import Cookies from 'js-cookie'
 import Loader from 'react-loader-spinner'
-import {BsFillExclamationTriangleFill} from 'react-icons/bs'
 
 import {Component} from 'react'
 import ReactSlick from '../ReactSlick'
 import Header from '../Header'
+import HomePoster from '../HomePoster'
 import Footer from '../Footer'
 
 const apiStatusConstants = {
@@ -22,7 +22,7 @@ class Home extends Component {
     originalsApiStatus: apiStatusConstants.initial,
     trendingNowMovies: [],
     originals: [],
-    HomePoster: {},
+    poster: {},
   }
 
   componentDidMount() {
@@ -107,7 +107,7 @@ class Home extends Component {
     this.setState({
       originals: updatedMoviesData,
       originalsApiStatus: apiStatusConstants.success,
-      HomePoster: HomePosterObj,
+      poster: HomePosterObj,
     })
   }
 
@@ -137,7 +137,11 @@ class Home extends Component {
 
   renderTrendingFailureView = () => (
     <div className="failure-container">
-      <BsFillExclamationTriangleFill size={25} color="#D81F26" />
+      <img
+        src="https://res.cloudinary.com/dio2gwquj/image/upload/v1679168604/Icon_home-failure_hb9h4i.png"
+        alt="failure view"
+        className="failure"
+      />
       <p className="failure-text">Something went wrong. Please try again</p>
       <button
         type="button"
@@ -171,7 +175,11 @@ class Home extends Component {
 
   renderOriginalsFailureView = () => (
     <div className="failure-container">
-      <BsFillExclamationTriangleFill size={25} color="#D81F26" />
+      <img
+        src="https://res.cloudinary.com/dio2gwquj/image/upload/v1679168604/Icon_home-failure_hb9h4i.png"
+        alt="failure view"
+        className="failure"
+      />
       <p className="failure-text">Something went wrong. Please try again</p>
       <button
         type="button"
@@ -197,12 +205,32 @@ class Home extends Component {
     }
   }
 
+  renderPosterResult = () => {
+    const {originalsApiStatus} = this.state
+    switch (originalsApiStatus) {
+      case apiStatusConstants.inProgress:
+        return this.renderLoader()
+      case apiStatusConstants.success:
+        return this.renderPoster()
+      case apiStatusConstants.failure:
+        return this.renderOriginalsFailureView()
+      default:
+        return null
+    }
+  }
+
+  renderPoster = () => {
+    const {poster} = this.state
+    return <HomePoster posterDetails={poster} />
+  }
+
   render() {
     return (
       <>
         <div className="movies-home-container">
           <Header />
-          <h1 className="movie-status-heading">Trending</h1>
+          {this.renderPosterResult()}
+          <h1 className="movie-status-heading">Trending Now</h1>
           {this.renderTrendingMoviesResult()}
           <h1 className="movie-status-heading">Originals</h1>
           {this.renderOriginalsMoviesResult()}

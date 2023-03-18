@@ -31,7 +31,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .container {
+  .login {
     background-color: #0c0b10;
     width: 380px;
     height: 400px;

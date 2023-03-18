@@ -76,7 +76,7 @@ class Popular extends Component {
 
     return (
       <>
-        <ul className="search-movies-list">
+        <ul className="popular-movies-list">
           {popularMovies.map(eachMovie => (
             <MovieItem movie={eachMovie} key={eachMovie.id} />
           ))}

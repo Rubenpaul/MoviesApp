@@ -2,3 +2,18 @@
   background: #131313;
   min-height: 100vh;
 }
+
+.popular-movies-list {
+  background: #131313;
+  padding-left: 25px;
+  padding-right: 25px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (min-width: 768px) {
+  .popular-movies-list {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
