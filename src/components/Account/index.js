@@ -20,7 +20,8 @@ class Account extends Component {
     const userName = localStorage.getItem('username')
     const passWord = localStorage.getItem('password')
 
-    const maskedPassword = '*'.repeat(passWord.length)
+    const maskedPassword =
+      passWord !== null ? '*'.repeat(passWord.length) : null
 
     return (
       <>
