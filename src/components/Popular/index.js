@@ -75,14 +75,11 @@ class Popular extends Component {
     const {popularMovies} = this.state
 
     return (
-      <>
-        <ul className="popular-movies-list">
-          {popularMovies.map(eachMovie => (
-            <MovieItem movie={eachMovie} key={eachMovie.id} />
-          ))}
-        </ul>
-        <Footer />
-      </>
+      <ul className="popular-movies-list">
+        {popularMovies.map(eachMovie => (
+          <MovieItem movie={eachMovie} key={eachMovie.id} />
+        ))}
+      </ul>
     )
   }
 
@@ -128,6 +125,7 @@ class Popular extends Component {
       <div className="popular-movies-container">
         <Header />
         {this.renderPopularMoviesResult()}
+        <Footer />
       </div>
     )
   }

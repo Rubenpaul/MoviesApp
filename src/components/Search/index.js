@@ -146,7 +146,6 @@ class Search extends Component {
       posterPath: eachSearch.poster_path,
       title: eachSearch.title,
     }))
-
     this.setState({
       searchApiStatus: apiStatusConstants.success,
       searchVideos: updatedData,
