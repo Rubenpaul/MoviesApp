@@ -45,7 +45,7 @@ class ReactSlick extends Component {
         {movies.map(eachMovie => {
           const {id, posterPath, title} = eachMovie
           return (
-            <li className="slick-item">
+            <li className="slick-item" key={id}>
               <Link to={`/movies/${id}`}>
                 <img
                   className="slick-img"

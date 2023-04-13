@@ -109,10 +109,8 @@ class Search extends Component {
 
   renderInitialView = () => <div className="initial-view">{}</div>
 
-  search = event => {
-    if (event.key === 'Enter') {
-      this.setState({searchInput: event.target.value}, this.getSearchVideos)
-    }
+  search = value => {
+    this.setState({searchInput: value}, this.getSearchVideos)
   }
 
   getSearchVideos = async () => {

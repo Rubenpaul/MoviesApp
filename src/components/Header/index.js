@@ -26,7 +26,9 @@ class Header extends Component {
 
   onKeyDownSearch = event => {
     const {search} = this.props
-    search(event)
+    if (event.key === 'Enter') {
+      search(event.target.value)
+    }
   }
 
   render() {
