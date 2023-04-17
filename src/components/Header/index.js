@@ -8,13 +8,9 @@ import {GiHamburgerMenu} from 'react-icons/gi'
 import {AiFillCloseCircle} from 'react-icons/ai'
 
 class Header extends Component {
-  state = {showSearchInput: false, showMenu: false}
+  state = {showMenu: false}
 
-  onClickSearchBtn = () => {
-    this.setState(prevState => ({
-      showSearchInput: !prevState.showSearchInput,
-    }))
-  }
+  onClickSearchBtn = () => {}
 
   onClickHamburgerMenu = () => {
     this.setState({showMenu: true})
@@ -32,13 +28,16 @@ class Header extends Component {
   }
 
   render() {
-    const {showSearchInput, showMenu} = this.state
+    const {showMenu} = this.state
+    const {location} = this.props
 
-    const searchContainerStyle = showSearchInput
+    const toggleSearchInput = location.pathname === '/search'
+
+    const searchContainerStyle = toggleSearchInput
       ? 'search-container'
       : 'new-search-container'
 
-    const searchBtnContainerStyle = showSearchInput
+    const searchBtnContainerStyle = toggleSearchInput
       ? 'search-btn-container'
       : 'new-search-btn-container'
 
@@ -70,7 +69,7 @@ class Header extends Component {
 
               <div className="nav-details-container">
                 <div className={searchContainerStyle}>
-                  {showSearchInput && (
+                  {toggleSearchInput && (
                     <input
                       type="search"
                       className="search-input"
