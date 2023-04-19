@@ -107,8 +107,6 @@ class Search extends Component {
     }
   }
 
-  renderInitialView = () => <div className="initial-view">{}</div>
-
   search = value => {
     this.setState({searchInput: value}, this.getSearchVideos)
   }
@@ -144,6 +142,7 @@ class Search extends Component {
       posterPath: eachSearch.poster_path,
       title: eachSearch.title,
     }))
+    console.log(updatedData)
     this.setState({
       searchApiStatus: apiStatusConstants.success,
       searchVideos: updatedData,
@@ -154,18 +153,10 @@ class Search extends Component {
     this.setState({searchApiStatus: apiStatusConstants.failure})
 
   render() {
-    const {searchInput} = this.state
     return (
       <div className="bg-container">
-        <Header
-          search={this.search}
-          searchInput={searchInput}
-          getSearchVideos={this.getSearchVideos}
-        />
-
-        {searchInput === ''
-          ? this.renderInitialView()
-          : this.renderSearchResults()}
+        <Header search={this.search} getSearchVideos={this.getSearchVideos} />
+        {this.renderSearchResults()}
       </div>
     )
   }
